@@ -9,7 +9,9 @@ In this project we built a miniature deep network framework using only PyTorch's
 
 
 ### Files (alphabetical order)
+_test.py_ - File with all functions and modules. Used to obtain one run of the entire project using default values. Useful for quick tests or demonstrations.
 
+**!! Notice:** This repository is in working progress to improve the readability of the project. The functions and modules are being split into smaller files according to functionality. Although this is being done to make the project easier to work with and handle, _test.py_ is functionally complete and can be run to obtain results of the entire project  **!!**
 
 ### Project overview 
 The framework has a superclass _Module_ which is used to pass features between subclasses. There are four types of subclasses:
