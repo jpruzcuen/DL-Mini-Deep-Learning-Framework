@@ -19,7 +19,7 @@ The framework has a superclass _Module_ which is used to pass features between s
   <img src="https://github.com/jpruzcuen/DL-Mini-Deep-Learning-Framework/blob/main/images/Net.png" width="40%" height="40%">
 </p>
   
-* Projection: Only contains the _Linear_ class which is used for initializing linear convolutional layers. Each of its instances stores the layer parameters (gradients, activation function, input/output value and activated output value). After initializing a  _Linear_ instance it is added to an internal list of _Module_ 
+* Projection: Only contains the _Linear_ class which is used for initializing linear convolutional layers. Each of its instances stores the layer parameters (gradients, activation function, input/output value and activated output value). After initializing a  _Linear_ instance it is added to an internal list of _Module_.
 * Activation: Contains the modules of the activation functions, including ReLU, tanh and identity. 
 * Computation: Contains the modules of the loss functions, including MSE loss, Binary Cross Entropy loss and Softmax loss (BCE with softmax instead of sigmoid). 
 
