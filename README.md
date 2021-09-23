@@ -13,14 +13,18 @@ In this project we built a miniature deep network framework using only PyTorch's
 
 ### Project overview 
 The framework has a superclass _Module_ which is used to pass features between subclasses. There are four types of subclasses:
-* Models: General model for building the network. Includes _Sequential_ (emulating nn.Sequential) and _Network_ which follows the standard way to declare a network class:
+* Models: General model for building the network. Includes the _Sequential_ class (emulating nn.Sequential) and _Network_ class, used for creating a networks in the more standard way. A sample network created with the _Network_ is shown below: 
 
-![Image 1](https://github.com/jpruzcuen/DL-Digit-comparison/blob/main/images/Framework.png)
+<p align="center">
+  <img src="https://github.com/jpruzcuen/DL-Mini-Deep-Learning-Framework/blob/main/images/Net.png" width="40%" height="40%">
+</p>
+  
+* Projection: Only contains the _Linear_ class which is used for initializing linear convolutional layers. Each of its instances stores the layer parameters (gradients, activation function, input/output value and activated output value). After initializing a  _Linear_ instance it is added to an internal list of _Module_ 
+* Activation: Contains the modules of the activation functions, including ReLU, tanh and identity. 
+* Computation: Contains the modules of the loss functions, including MSE loss, Binary Cross Entropy loss and Softmax loss (BCE with softmax instead of sigmoid). 
 
+An overview of the framework is shown below:
 
-* Projection
-* Activation
-* Computation
-
-
-![Image 2](https://github.com/jpruzcuen/DL-Digit-comparison/blob/main/images/Net.png)
+<p align="center">
+  <img src="https://github.com/jpruzcuen/DL-Mini-Deep-Learning-Framework/blob/main/images/Framework.png" width="60%" height="60%">
+</p>
